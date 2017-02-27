@@ -1,0 +1,48 @@
+*foreground: #D7D0C7
+*background: #151515
+
+!black
+!! *color0:     #AF875F
+!! *color8:     #AF875F
+*color0:     #101010
+*color8:     #404040
+!!red
+*color1:     #E84F4F
+*color9:     #D23D3D
+!!green
+*color2:     #B8D68C
+*color10:    #A0CF5D
+!!yellow
+*color3:     #E1AA5D
+*color11:    #F39D21
+!!blue
+*color4:     #7DC1CF
+*color12:    #4E9FB1
+!!magenta
+*color5:     #9B64FB
+*color13:    #8542FF
+!!cyan
+*color6:     #6D878D
+*color14:    #42717B
+!!white
+*color7:     #dddddd
+*color15:    #dddddd
+!
+URxvt*borderColor:        #151515
+URxvt*colorBD:            #ffffff
+URxvt*cursorColor:        #ff8939
+URxvt*cursorColor2:       #151515
+URxvt.font:             xft:Hack-9:hinting=True;antialias:True,xft:Source Code Pro for Powerline-9:hinting=True;antialias:True,xft:WenQuanYi Bitmap Song-9:medium;antialias=False,xft:WenQuanYi Zen Hei-9:medium;antialias=True,xft:HanaMinA-9:medium;antialias:True,xft:HanaMinB-9:medium;antialias:True,xft:HanaMinPlus-9:medium;antialias:True
+URxvt.boldFont:             xft:Hack-9:bold;hinting=True;antialias=True,xft:Source Code Pro for Powerline-9:bold;hinting=True;antialias:True,xft:WenQuanYi Bitmap Song-9:bold;antialias=False,xft:WenQuanYi Zen Hei-9:bold;antialias=True,xft:HanaMinA-9:bold;antialias:True,xft:HanaMinB-9:bold;antialias:True,xft:HanaMinPlus-9:bold;antialias:True
+!
+URxvt.scrollBar: false
+URxvt.letterSpace:      0
+!
+!
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+URxvt.perl-ext-common: tabbedex
+URxvt.tabbed.autohide: true
+URxvt.keysym.Control-t: perl:tabbedex:new_tab
+URxvt.keysym.Control-Tab: perl:tabbedex:next_tab
+URxvt.keysym.Control-Shift-Tab: perl:tabbedex:prev_tab

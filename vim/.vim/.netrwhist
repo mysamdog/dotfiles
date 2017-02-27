@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/luc/.zprezto'
+let g:netrw_dirhist_2='/home/luc/projects/c-skeleton'
+let g:netrw_dirhist_3='/home/luc/projects/dive/src'
+let g:netrw_dirhist_4='/home/luc/.config/herbstluftwm'
+let g:netrw_dirhist_5='/home/luc'
+let g:netrw_dirhist_6='/home/luc/.config/rofi'
