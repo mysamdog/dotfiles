@@ -1,1 +1,0 @@
-/home/luc/.zprezto/runcoms/zprofile

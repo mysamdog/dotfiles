@@ -1,9 +1,36 @@
-execute pathogen#infect()
+set nocompatible
+filetype off
+
+"Plugins
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'flazz/vim-colorschemes.git'
+Plugin 'vim-scripts/paredit.vim'
+Plugin 'luochen1990/rainbow'
+Plugin 'vim-scripts/SlateDark'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-classpath'
+Plugin 'guns/vim-clojure-highlight'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-dispatch'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'tpope/vim-fireplace'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tpope/vim-projectionist'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-salve'
+Plugin 'guns/vim-slamhound'
+call vundle#end()
+
 syntax on
 noremap <F2> :tabnew .<CR>
 noremap <F6> :tabp<CR>
 noremap <F7> :tabn<CR>
 noremap <F12> :so $MYVIMRC<CR>
+nnoremap <Space> @q
 filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
@@ -15,7 +42,6 @@ inoremap JK <ESC>l
 inoremap kj <ESC>l
 inoremap KJ <ESC>l
 set shortmess=a
-colo SlateDark
 let g:EasyMotion_do_mapping = 0
 noremap <leader> <PLUG>(easymotion-prefix)
 let g:EasyMotion_smartcase = 1

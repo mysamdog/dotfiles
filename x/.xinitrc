@@ -1,5 +1,5 @@
 #!/bin/bash
-export TERMINAL=urxvt
+export TERMINAL=termite
 export DE=openbox
 xrdb -merge ~/.Xresources
 # Dbus fix
