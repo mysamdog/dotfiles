@@ -26,7 +26,7 @@ selfg='#101010'
 # In e.g. Ubuntu, this is named dzen2-textwidth.
 if which textwidth &> /dev/null ; then
     textwidth="textwidth";
-fc-list
+#fc-list
 elif which dzen2-textwidth &> /dev/null ; then
     textwidth="dzen2-textwidth";
 else
@@ -65,24 +65,26 @@ hc pad $monitor $panel_height
     #   <eventname>\t<data> [...]
     # e.g.
     #   date    ^fg(#efefef)18:33^fg(#909090), 2013-10-^fg(#efefef)29
-
-    mpc idleloop player &
+		mpc idleloop player &
     while true ; do
         # "date" output is checked once a second, but an event is only
         # generated if the output changed compared to the previous run.
         date +$'date\t^fg(#efefef)%H:%M^fg(#909090), %Y-%m-^fg(#efefef)%d'
         sleep 1 || break
     done > >(uniq_linebuffered) &
-    childpid=$!
+		
+    childpid1=$!
+		childpid2=$!
     hc --idle
-    kill $childpid
+    kill $childpid1
+		kill $childpid2
 } 2> /dev/null | {
     IFS=$'\t' read -ra tags <<< "$(hc tag_status $monitor)"
     visible=true
     date=""
     windowtitle=""
     while true ; do
-
+		echo $SONG >&2
         ### Output ###
         # This part prints dzen data based on the _previous_ data handling run,
         # and then waits for the next event to happen.
@@ -122,10 +124,10 @@ hc pad $monitor $panel_height
         echo -n "$separator"
         echo -n "^bg()^fg() ${windowtitle//^/^^}"
         # small adjustments
-        right="$separator^bg() $date"
+        right="$SONG $separator^bg() $date"
         right_text_only=$(echo -n "$right" | sed 's.\^[^(]*([^)]*)..g')
         # get width of right aligned text.. and add some space..
-        width=$($textwidth "$font" "$right_text_only  ")
+        width=$($textwidth "$font" "$right_text_only      ")
         echo -n "^pa($(($panel_width - $width)))$right"
         echo
 
@@ -142,13 +144,14 @@ hc pad $monitor $panel_height
         # find out event origin
         case "${cmd[0]}" in
             tag*)
-                #echo "resetting tags" >&2
                 IFS=$'\t' read -ra tags <<< "$(hc tag_status $monitor)"
                 ;;
             date)
-                #echo "resetting date" >&2
                 date="${cmd[@]:1}"
                 ;;
+						player)
+							 	export SONG=$(mpc current | tr -d "\n")
+								;;
             quit_panel)
                 exit
                 ;;

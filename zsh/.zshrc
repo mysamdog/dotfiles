@@ -56,7 +56,7 @@ bindkey -M viins 'jk' vi-cmd-mode
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux fancy-ctrl-z man archlinux systemd vi-mode)
+plugins=(git archlinux fancy-ctrl-z man archlinux systemd)
 
 source $ZSH/oh-my-zsh.sh
 
