@@ -147,7 +147,8 @@ hc unrule -F
 #hc rule class=XTerm tag=3 # move all xterms to tag 3
 
 hc rule class~Firefox tag=ii
-hc rule class~Music tag=v
+
+if [ $(hostname -s) -eq "nixbox" ]; then hc rule class~Music tag=v;
 hc rule focus=on # normally focus new clients
 #hc rule focus=off # normally do not focus new clients
 # give focus to most common terminals
@@ -186,7 +187,7 @@ then
 	hc spawn $TERMINAL
 fi
 
-if ! xdotool search --class "Music"
+if ! xdotool search --class "Music" && [ $(hostname -s) -eq nixbox]
 then
 	$(sleep 0.5 && hc spawn $TERMINAL --class=Music --exec=ncmpcpp) &
 fi
