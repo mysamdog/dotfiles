@@ -10,5 +10,6 @@ compton -b -o 0
 pulseaudio -D
 xinput disable "AlpsPS/2 ALPS DualPoint Stick"
 /usr/bin/xdg-user-dirs-update
+exec herbstluftwm
 # Openrc start openbox session
 #exec ck-launch-session dbus-launch --sh-syntax --exit-with-session openbox-session

@@ -9,21 +9,22 @@ hc() {
 }
 hc emit_hook reload
 
-xsetroot -solid '#333333'
-
+hsetroot -solid '#333333'
+xsetroot -cursor_name left_ptr
 ~/.config/herbstluftwm/killtray.sh
 # remove all existing keybindings
 hc keyunbind --all
 
 # keybindings
 # if you have a super key you will be much happier with Mod set to Mod4
-Mod=Mod1    # Use alt as the main modifier
-#Mod=Mod4   # Use the super key as the main modifier
+#Mod=Mod1    # Use alt as the main modifier
+Mod=Mod4   # Use the super key as the main modifier
+
 
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-w close_or_remove
-hc keybind $Mod-Return spawn $TERMINAL # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-Return spawn termite # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-d spawn rofi -show drun -modi drun
 hc keybind $Mod-t emit_hook togglehidepanel
 
@@ -148,6 +149,8 @@ hc unrule -F
 
 hc rule class~Firefox tag=ii
 hc rule class~Qemu-system-i386 tag=iii
+hc rule class='Bochs' tag=iii
+hc rule name='Bochs Enhanced Debugger' tag=iv
 #if [ $(hostname -s) -eq "nixbox" ]; then hc rule class~Music tag=v;
 hc rule focus=on # normally focus new clients
 #hc rule focus=off # normally do not focus new clients
