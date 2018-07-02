@@ -24,13 +24,13 @@ Mod=Mod4   # Use the super key as the main modifier
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-w close_or_remove
-hc keybind $Mod-Return spawn termite # use your $TERMINAL with xterm as fallback
-hc keybind $Mod-d spawn rofi -show drun -modi drun
+hc keybind $Mod-Shift-Return spawn ${TERMINAL:-xterm} # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-d spawn rofi -combi-modi window,drun -show combi -modi combi
 hc keybind $Mod-t emit_hook togglehidepanel
 
 hc keybind $Mod-Left  spawn mpc prev
-hc keybind $Mod-Down  spawn dvol -d 5
-hc keybind $Mod-Up    spawn dvol -i 5
+hc keybind $Mod-Down  spawn amixer -d 1
+hc keybind $Mod-Up    spawn dvol -i 1
 hc keybind $Mod-Right spawn mpc next
 
 hc keybind XF86AudioRaiseVolume spawn dvol -i 2
@@ -180,14 +180,6 @@ for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
 done
 #{mpd --kill && sleep 0.2 && mpd;} &
 pulseaudio & 2> /dev/null
-
-if ! pgrep -x "firefox"; then
-	hc spawn firefox
-fi
-
-if ! pgrep -x "$TERMINAL"; then
-	hc spawn $TERMINAL
-fi
 
 #if ! xdotool search --class "Music" && [ $(hostname -s) -eq nixbox]
 #then

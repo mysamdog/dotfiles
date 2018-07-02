@@ -1,3 +1,6 @@
 [submodule "emacs/.emacs.d/evil"]
 	path = emacs/.emacs.d/evil
 	url = https://github.com/emacs-evil/evil
+[submodule "zsh/.oh-my-zsh"]
+	path = zsh/.oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh

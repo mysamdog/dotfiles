@@ -29,7 +29,7 @@
  '(org-startup-truncated nil)
  '(package-selected-packages
    (quote
-    (airline-themes monokai-theme org-bullets powerline-evil syndicate ## ac-cider rotate smartparens evil restart-emacs auto-complete simpleclip ace-window avy solarized-theme))))
+    (company evil-cleverparens airline-themes monokai-theme org-bullets powerline-evil syndicate ## ac-cider rotate smartparens evil restart-emacs auto-complete simpleclip ace-window avy solarized-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -52,18 +52,15 @@
 (global-set-key (kbd "C-c j") 'avy-goto-word-or-subword-1)
 (global-set-key (kbd "M-p") 'ace-window)
 (global-set-key (kbd "C-c a") 'org-agenda)
-(require 'auto-complete-config)
-(ac-config-default)
 (setq inhibit-splash-screen t)
 (setq org-todo-keywords
   '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
 (add-hook 'dired-load-hook '(lambda () (require 'dired-x))) ; Load Dired X when Dired is loaded.
     (setq dired-omit-mode t) ; Turn on Omit mode.
 (require 'smartparens-config)
-(require 'ac-cider)
 (defun sp-config ()
   (progn
-    (smartparens-strict-mode)
+    (smartparens-mode)
     (ac-flyspell-workaround)
     (ac-cider-setup)
     (local-set-key (kbd "C-<right>") 'sp-forward-slurp-sexp)
@@ -71,7 +68,7 @@
     (local-set-key (kbd "M-<right>") 'sp-forward-barf-sexp)
     (local-set-key (kbd "M-<left>") 'sp-backward-barf-sexp)))
 
-(mapc (lambda (f) (add-hook f #'sp-config)) '(cider-mode-hook cider-repl-mode-hook clojure-mode-hook emacs-lisp-mode-hook))
+(mapc (lambda (f) (add-hook f #'(lambda () (sp-config) (evil-cleverparens-mode)))) '(cider-mode-hook cider-repl-mode-hook clojure-mode-hook emacs-lisp-mode-hook))
 
 (setq cider-repl-display-help-banner nil)
 (eval-after-load "auto-complete"
@@ -103,4 +100,9 @@
 (scroll-bar-mode -1)
 (require 'helm-config)
 (redraw-display)
-(setq org-ellipsis "⋱")
+(setq org-ellipsis "⤵")
+(set-face-attribute 'default nil :height 85)
+(setq exec-path (append exec-path '("~/bin")))
+(global-linum-mode 1)
+(server-start)
+(show-paren-mode)

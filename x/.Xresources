@@ -28,6 +28,8 @@
 *color7:     #dddddd
 *color15:    #dddddd
 !
+
+Xcursor.size: 16
 URxvt*borderColor:        #151515
 URxvt*colorBD:            #ffffff
 URxvt*cursorColor:        #ff8939

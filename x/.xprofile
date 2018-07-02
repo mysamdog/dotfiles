@@ -1,14 +1,16 @@
 #!/bin/bash
 export TERMINAL=termite
 export DE=openbox
+export EDITOR=emacsclient
+export VISUAL=emacsclient
 xrdb -merge ~/.Xresources
 # Dbus fix
 #if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
 #    eval "$(dbus-launch --sh-syntax --exit-with-session)"
 #fi
-compton -b -o 0
+compton -b -o 0 --xrender-sync --xrender-sync-fence
 pulseaudio -D
-xinput disable "AlpsPS/2 ALPS DualPoint Stick"
+xinput disable "AlpsPS/2 ALPS DualPoint Stick" || true
 /usr/bin/xdg-user-dirs-update
 exec herbstluftwm
 # Openrc start openbox session

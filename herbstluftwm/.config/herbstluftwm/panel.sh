@@ -14,7 +14,7 @@ fi
 # geometry has the format W H X Y
 x=${geometry[0]}
 y=${geometry[1]}
-panel_width=$(expr ${geometry[2]} - 140)
+panel_width=$(expr ${geometry[2]} - 140 + 140 \* $monitor)
 panel_height=16
 export font='-*-profont-*-*-*-*-11-*-*-*-*-*-*-*'
 bgcolor=$(hc get frame_border_normal_color)

@@ -1,84 +1,118 @@
-((("airline-themes" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("powerline-evil-vim-color-theme" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("powerline-vim-theme" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("monokai-theme" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("ispell" .
+((("company-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("ac-linum-workaround" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("show-paren-mode" .
+   [1 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("server-start" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("lambda" .
    [1 0 0 0 0 0])
-  ("defalias" .
-   [1 0 0 0 0 0 0 0])
-  ("progn" .
-   [1 0 0 0 0])
-  ("powerstrat" .
-   [0 0 0 0 0 0 0 0 0 1])
-  (":require" .
-   [1 0 0 0 0 0 0 0])
-  ("powerstrat.field" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("require" .
-   [4 0 0 0 0 0 0])
-  ("setq" .
-   [2 0 0 0])
-  ("smartparens-config" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("add-hook" .
-   [3 0 0 0 0 0 0 0])
-  ("cider-mode-hook" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("smartparens-strict-mode" .
-   [3 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("cider-repl-mode-hook" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("smartparens-strict-mode-map" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("defn" .
-   [1 0 0 0])
-  ("local-set-key" .
-   [3 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("kbd" .
-   [4 0 0])
-  ("sp-forward-slurp-sexp" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("sp-backward-slurp-sexp" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("sp-forward-barf-sexp" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("sp-backward-barf-sexp" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("sp-config" .
-   [2 0 0 0 0 0 0 0 1])
-  ("clojure-mode-hook" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("functionp" .
-   [1 0 0 0 0 0 0 0 0])
-  ("ac-cider" .
-   [1 0 0 0 0 0 0 0])
-  ("ac-flyspell-workaround" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("ac-cider-setup" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("powerline-evil-vim-theme" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("airline-cursor-colors" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("custom-theme-set-faces" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("airline-molokai" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("minibuffer-prompt" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  (":foreground" .
+  (":height" .
+   [3 0 0 0 0 0 0])
+  ("set-face-attribute" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("set-face-bold" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("set" .
+   [1 0 0])
+  ("helm-config" .
    [1 0 0 0 0 0 0 0 0 0 0])
-  ("nil" .
-   [2 0 0])
-  (":background" .
-   [1 0 0 0 0 0 0 0 0 0 0])
+  ("default" .
+   [3 0 0 0 0 0 0])
   (":inherit" .
    [1 0 0 0 0 0 0 0])
-  ("default" .
-   [1 0 0 0 0 0 0])
-  ("helm-config" .
-   [1 0 0 0 0 0 0 0 0 0 0])))
+  (":background" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("nil" .
+   [5 0 0])
+  (":foreground" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("minibuffer-prompt" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("airline-molokai" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("custom-theme-set-faces" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("airline-cursor-colors" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("powerline-evil-vim-theme" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ac-cider-setup" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ac-flyspell-workaround" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ac-cider" .
+   [1 0 0 0 0 0 0 0])
+  ("functionp" .
+   [1 0 0 0 0 0 0 0 0])
+  ("clojure-mode-hook" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("sp-config" .
+   [3 0 0 0 0 0 0 0 1])
+  ("sp-backward-barf-sexp" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("sp-forward-barf-sexp" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("sp-backward-slurp-sexp" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("sp-forward-slurp-sexp" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("kbd" .
+   [4 0 0])
+  ("local-set-key" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("defn" .
+   [1 0 0 0])
+  ("smartparens-strict-mode-map" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("cider-repl-mode-hook" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("smartparens-strict-mode" .
+   [3 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("cider-mode-hook" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("add-hook" .
+   [5 0 0 0 0 0 0 0])
+  ("smartparens-config" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("setq" .
+   [2 0 0 0])
+  ("require" .
+   [4 0 0 0 0 0 0])
+  ("powerstrat.field" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":require" .
+   [1 0 0 0 0 0 0 0])
+  ("powerstrat" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("progn" .
+   [2 0 0 0 0])
+  ("defalias" .
+   [1 0 0 0 0 0 0 0])
+  ("ispell" .
+   [1 0 0 0 0 0])
+  ("monokai-theme" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("powerline-vim-theme" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("powerline-evil-vim-color-theme" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("airline-themes" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("evil-cleverparens-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0])
+  ("lisp-mode-hook" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":status" .
+   [3 0 0 0 0 0 0])
+  ("evil" .
+   [1 0 0 0])
+  ("server" .
+   [3 0 0 0 0 0])
+  ("def" .
+   [1 0 0])
+  ("stop-server" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("reset!" .
+   [0 0 0 0 0 1])))
