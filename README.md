@@ -11,4 +11,5 @@ To use the zsh dotfile, install oh-my-zsh first.
 ```bash
 git clone https://github.com/alice157/dotfiles ~/dotfiles
 cd ~/dotfiles
-stow emacs zsh```
+stow emacs zsh
+```
