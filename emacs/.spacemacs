@@ -72,7 +72,7 @@ values."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(org-projectile)
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
    ;; `used-only' installs only explicitly used packages and uninstall any
@@ -342,12 +342,16 @@ you should place your code here."
                                  evil-insert-state-local-map
                                  (kbd "M-RET")
                                  #'org-meta-return))))
-  (setq org-agenda-files '("~/notes/todo.org"))
+  (setq org-agenda-files '("~/notes/todo.org" "~"))
   (setq org-capture-templates '(
+                                ("w" "Work note" entry (file+datetree "~/notes/amperity.org")
+                                 "* %?\n Entered on %T\n  %i  %a")
                                 ("t" "Todo" entry (file "~/notes/todo.org")
                                  "* TODO %? %U")
                                 ("j" "Journal" entry (file+datetree "~/notes/journal.org")
-                                 "* %?\nEntered on %U\n  %i\n  %a")))
+                                 "* %?\nEntered on %U\n%a")
+                                ("l" "Log time" entry (file+datetree "~/notes/timesheet.org")
+                                 "* %T %?")))
 
 
   (setq cider-default-cljs-repl 'figwheel)
